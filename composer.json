@@ -1,0 +1,41 @@
+{
+    "name": "wirgen/laravel-hermitage-client",
+    "type": "library",
+    "description": "Laravel Hermitage Client.",
+    "keywords": [
+        "laravel",
+        "hermitage",
+        "client"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Denis Nikiforov",
+            "email": "my.wirgen@gmail.com",
+            "homepage": "https://wirgen.by"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "guzzlehttp/guzzle": "^6.3|^7.0",
+        "livetyping/hermitage-php-client": "~0.1",
+        "psr/http-message": "~1.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Wirgen\\HermitageClient\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wirgen\\HermitageClient\\HermitageClientServiceProvider"
+            ],
+            "aliases": {
+                "Hermitage": "Wirgen\\HermitageClient\\HermitageClientFacade"
+            }
+        }
+    }
+}
